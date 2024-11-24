@@ -23,7 +23,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -147,22 +147,22 @@ fun DisplayController(
 fun ArtSpaceApp(
     modifier: Modifier = Modifier,
 ) {
-    var ArtWorkNumber: Int by remember { mutableStateOf(1) }
-    val image = when (ArtWorkNumber) {
+    var artWorkNumber: Int by remember { mutableIntStateOf(1) }
+    val image = when (artWorkNumber) {
         1 -> R.drawable.the_embarkation_of_the_queen_of_sheba
         2 -> R.drawable.self_portrait_by_salvator_rosa
         3 -> R.drawable.judith_slaying_holofernes
         4 -> R.drawable.martyrdom_of_st_philip
         else -> R.drawable.the_embarkation_of_the_queen_of_sheba
     }
-    val title = when (ArtWorkNumber) {
+    val title = when (artWorkNumber) {
         1 -> R.string.the_embarkation_of_the_queen_of_sheba
         2 -> R.string.self_portrait_by_salvator_rosa
         3 -> R.string.judith_slaying_holofernes
         4 -> R.string.martyrdom_of_st_philip
         else -> R.string.the_embarkation_of_the_queen_of_sheba
     }
-    val description = when (ArtWorkNumber) {
+    val description = when (artWorkNumber) {
         1 -> R.string.the_embarkation_of_the_queen_of_sheba_description
         2 -> R.string.self_portrait_by_salvator_rosa_description
         3 -> R.string.judith_slaying_holofernes_description
@@ -186,14 +186,14 @@ fun ArtSpaceApp(
         Spacer(modifier = Modifier.height(8.dp))
         DisplayController(
             onPreviousClick = {
-                ArtWorkNumber -= 1
-                if (ArtWorkNumber == 0) {
-                    ArtWorkNumber = 4
+                artWorkNumber -= 1
+                if (artWorkNumber == 0) {
+                    artWorkNumber = 4
             } },
             onNextClick = {
-                ArtWorkNumber += 1
-                if (ArtWorkNumber == 5) {
-                    ArtWorkNumber = 1
+                artWorkNumber += 1
+                if (artWorkNumber == 5) {
+                    artWorkNumber = 1
                 }
             },
         )
