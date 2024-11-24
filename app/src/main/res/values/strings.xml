@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Art Space</string>
+    <string name="cat_coding">cat coding</string>
+    <string name="cat_coding_title">NGs</string>
+    <string name="cat_coding_description">NGs (2023)</string>
+    <string name="the_embarkation_of_the_queen_of_sheba">The Embarkation of the Queen of Sheba</string>
+    <string name="the_embarkation_of_the_queen_of_sheba_description">Claude Lorrain (1648)</string>
+    <string name="self_portrait_by_salvator_rosa">Self Portrait</string>
+    <string name="self_portrait_by_salvator_rosa_description">Salvator Rosa 1640</string>
+    <string name="judith_slaying_holofernes">Judith Slaying Holofernes</string>
+    <string name="judith_slaying_holofernes_description">Artemisia Gentileschi (1614–20)</string>
+    <string name="martyrdom_of_st_philip">Martyrdom of St Philip</string>
+    <string name="martyrdom_of_st_philip_description">José de Ribera (1639)</string>
+</resources>
